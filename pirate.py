@@ -122,8 +122,8 @@ PIRATE_PATTERNS = [(re.compile(p, re.I), r) for (p,r) in [
     (r'\bdied\b', 'snuffed it'),
     (r'ing\b/', "in'"),
     (r'ings\b/', "in's"),
-    (r'(\.\s)', partial(avast, chance=3)),
-    (r'([!\?]\s)', partial(avast, chance=2)),
+    (r'(\.\s)', partial(avast, chance=1)),
+    (r'([!\?]\s)', partial(avast, chance=1)),
 ]]
 
 SHOUTS = [
