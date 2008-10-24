@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Piratize!</title>
+        <style type="text/css">
+            h1, 
+            form,
+            #bookmarklet {
+                text-align: center;
+            }
+
+            h1 a,
+            h1 a:visited {
+                color: black;
+                text-decoration: none;
+            }
+
+            h1 a:hover {
+                text-decoration: underline;
+            }
+
+            form input {
+                font-size: 120%;
+            }
+            
+            #bookmarklet {
+                font-size: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1><a href="/">Piratize!</a></h1>
+        <form method="get">
+            <input name="url" value="friendfeed.com/bgolub"/>
+            <input type="submit" value="{{ submit_value }}"/>
+        </form>
+        <div id="bookmarklet">
+            Drag the bookmarklet to your toolbar:
+            <a href="javascript:document.location='http://{{ request.host }}/?url='+encodeURIComponent(document.location)">Piratize!</a>
+        </div>
+    </body>
+</html>
